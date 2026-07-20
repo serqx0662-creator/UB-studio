@@ -27,26 +27,26 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "UB Studio — Turdukulov Ulukbek",
   description:
-    "UB Studio — фронтенд-разработка на React и Next.js. Портфолио Улукбека Турдукулова.",
+      "UB Studio — фронтенд-разработка на React и Next.js. Портфолио Улукбека Турдукулова.",
 };
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru">
+      <html lang="ru" className="overflow-x-hidden">
       <body
-        className={`${display.variable} ${body.variable} ${mono.variable} font-body text-fog antialiased`}
+          className={`${display.variable} ${body.variable} ${mono.variable} font-body text-fog antialiased min-h-screen w-full overflow-x-hidden`}
       >
-        <div className="noise" />
-        <CustomCursor />
-        <GradientBackground />
-        <Navbar />
-        <main className="relative">{children}</main>
-        <Footer />
+      <div className="noise" />
+      <CustomCursor />
+      <GradientBackground />
+      <Navbar />
+      <main className="relative w-full overflow-x-hidden">{children}</main>
+      <Footer />
       </body>
-    </html>
+      </html>
   );
 }
